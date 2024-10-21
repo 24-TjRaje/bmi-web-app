@@ -29,13 +29,13 @@ public class BmiService {
 
     private String decideStatus(Float bmi) {
        if(bmi < 18.5) {
-           return "under weight";
+           return "Under weight";
        } else if (bmi >= 18.5 && bmi < 25.0)  {
-            return "normal";
+            return "Normal";
        } else if (bmi >= 25 && bmi < 30) {
-           return "over weight";
+           return "Over weight";
        } else {
-           return "obese";
+           return "Obese";
        }
     }
 }

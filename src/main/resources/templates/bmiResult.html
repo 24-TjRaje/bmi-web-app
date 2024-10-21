@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI APP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h3 {
+            text-align: left;
+            color: #333;
+        }
+        span {
+            color: green
+            font-size : 10px
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .redirect-button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* To allow padding */
+        }
+        .redirect-button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+
+</head>
+<body>
+<div class = "container">
+    <h1 class="bodyClass">BMI APP RESULT</h1>
+    <br>
+    <span class="spanClass">
+        <h3>Height (m) : <span th:text="${result.height}">0</span></h3>
+        <h3>Weight (kgs) : <span th:text="${result.weight}">0</span></h3>
+        <h3>BMI : <span th:text="${result.bmi}">0</span></h3>
+        <h3>Status : <span th:text="${result.status}">0</span></h3>
+    </span>
+    <a th:href="@{/}" class="redirect-button">Homepage</a>
+</div>
+</body>
+
+</html>
